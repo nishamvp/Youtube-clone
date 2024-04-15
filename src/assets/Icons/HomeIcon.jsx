@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 function HomeIcon() {
   return (
@@ -16,7 +16,7 @@ function HomeIcon() {
         </g>
       </g>
     </svg>
-  );
+  )
 }
 
-export default HomeIcon;
+export default HomeIcon

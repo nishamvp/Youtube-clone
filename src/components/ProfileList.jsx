@@ -1,10 +1,11 @@
 import React from 'react'
-import { SIDEBAR_MAIN_LIST } from '../assets/constants'
+import { SIDEBAR_PROFILE_LIST } from '../assets/constants'
 
-const MainList = () => {
+const ProfileList = () => {
     return (
         <ul className="py-4">
-          {SIDEBAR_MAIN_LIST.map((item, index) => (
+          <h2 className="font-semibold text-xl">You</h2>
+          {SIDEBAR_PROFILE_LIST.map((item, index) => (
             <li
               key={index}
               className="flex px-2 py-3 justify-start items-center gap-3"
@@ -17,4 +18,4 @@ const MainList = () => {
       )
 }
 
-export default MainList
+export default ProfileList

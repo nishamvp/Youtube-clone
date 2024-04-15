@@ -1,7 +1,10 @@
 import GamePadIcon from "./Icons/GamePadIcon";
+import HistoryIcon from "./Icons/HistoryIcon";
 import HomeIcon from "./Icons/HomeIcon";
 import MoviesIcon from "./Icons/MoviesIcon";
 import MusicIcon from "./Icons/MusicIcon";
+import PlayListIcon from "./Icons/PlayListIcon";
+import ProfileIcon from "./Icons/ProfileIcon";
 import ShortsIcon from "./Icons/ShortsIcon";
 import SubscriptionIcon from "./Icons/SubscriptionIcon";
 import TrophyIcon from "./Icons/TrophyIcon";
@@ -17,7 +20,13 @@ export const SIDEBAR_EXPLORE_LIST = [
 ];
 
 export const SIDEBAR_MAIN_LIST = [
-    { Icon: HomeIcon, text: "Home" }, 
-    { Icon: ShortsIcon, text: "Shorts" },
-    { Icon: SubscriptionIcon, text: "Subscriptions" },
-  ];
+  { Icon: HomeIcon, text: "Home" },
+  { Icon: ShortsIcon, text: "Shorts" },
+  { Icon: SubscriptionIcon, text: "Subscriptions" },
+];
+
+export const SIDEBAR_PROFILE_LIST = [
+  { Icon: ProfileIcon, text: "Your Channel" },
+  { Icon: HistoryIcon, text: "History" },
+  { Icon: PlayListIcon, text: "Playlists" },
+];
