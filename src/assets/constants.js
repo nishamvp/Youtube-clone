@@ -30,3 +30,22 @@ export const SIDEBAR_PROFILE_LIST = [
   { Icon: HistoryIcon, text: "History" },
   { Icon: PlayListIcon, text: "Playlists" },
 ];
+
+export const BUTTON_LIST = [
+  "All",
+  "Game Shows",
+  "iOS",
+  "Mixes",
+  "Dramedy",
+  "Samsung",
+  "AI",
+  "Web Development",
+  "Cricket",
+  "Lessons",
+  "Technology",
+  "Vlogs",
+  "Martial Arts",
+  "Food",
+  "Travel",
+  "Sports"
+];

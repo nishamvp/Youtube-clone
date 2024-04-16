@@ -4,7 +4,7 @@ import { SIDEBAR_EXPLORE_LIST } from '../assets/constants'
 const ExploreList = () => {
   return (
     <ul className="py-4">
-      <h2 className="font-semibold text-xl">Explore</h2>
+      <h2 className="font-semibold text-xl p-2">Explore</h2>
       {SIDEBAR_EXPLORE_LIST.map((item, index) => (
         <li
           key={index}
