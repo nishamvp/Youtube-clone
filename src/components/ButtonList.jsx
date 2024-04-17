@@ -1,10 +1,12 @@
 import React from 'react'
 import Button from './Button'
+import { useSelector } from 'react-redux'
 
 const ButtonList = () => {
+ const isMenuOpen =  useSelector(store=>store.app.isMenuOpen)
     
   return (
-    <div className="w-11/12">
+    <div className={`w-screen   ${!isMenuOpen && "px-4 "}`}>
       <Button />
     </div>
   )

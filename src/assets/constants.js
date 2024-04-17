@@ -47,5 +47,7 @@ export const BUTTON_LIST = [
   "Martial Arts",
   "Food",
   "Travel",
-  "Sports"
+  "Sports",
+  "Autos",
+  "Comedy"
 ];

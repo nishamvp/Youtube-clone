@@ -9,7 +9,7 @@ const Button = () => {
   }
 
   return (
-    <div className="flex overflow-x-auto gap-3 button-scrollbar">
+    <div className="flex overflow-x-auto gap-3 button-scrollbar ">
       {BUTTON_LIST.map((button) => (
         <button
           key={button}
