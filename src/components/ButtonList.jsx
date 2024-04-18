@@ -6,7 +6,7 @@ const ButtonList = () => {
  const isMenuOpen =  useSelector(store=>store.app.isMenuOpen)
     
   return (
-    <div className={`w-screen   ${!isMenuOpen && "px-4 "}`}>
+    <div className={`w-screen px-4    `}>
       <Button />
     </div>
   )

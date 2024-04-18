@@ -5,10 +5,11 @@ import ProfileList from './ProfileList'
 import { useSelector } from 'react-redux'
 
 const SideBar = () => {
-  const isMenuOpen = useSelector(store=>store.app.isMenuOpen)
+  const isMenuOpen = useSelector(store => store.app.isMenuOpen)
+  
   return isMenuOpen ? (
-    <div className="col-span-1 ">
-      <div className="mx-5">
+    <div className="col-span-2 ">
+      <div className="px-5 ">
         <MainList/>
         <hr />
         <ExploreList/>
@@ -16,7 +17,7 @@ const SideBar = () => {
         <ProfileList/>
       </div>
     </div>
-  ) :  null
+  ) : null
 }
 
 export default SideBar

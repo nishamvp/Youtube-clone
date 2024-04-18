@@ -1,8 +1,19 @@
 import React from 'react'
+import VideoCard from './VideoCard'
+import useGetVideos from '../hooks/useGetVideos'
+import { useSelector } from 'react-redux'
 
 const VideoContainer = () => {
-  return (
-    <div>VideoContainer</div>
+  const videos = useSelector((store) => store.app.popularVideos)
+  const { isLoading } = useGetVideos()
+  return !isLoading ? (
+    <div className="mt-6 flex gap-5 flex-wrap  px-4 ">
+      {videos?.map((video) => (
+        <VideoCard video={video} />
+      ))}
+    </div>
+  ) : (
+    'Loading...'
   )
 }
 

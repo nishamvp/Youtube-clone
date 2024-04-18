@@ -49,5 +49,9 @@ export const BUTTON_LIST = [
   "Travel",
   "Sports",
   "Autos",
-  "Comedy"
+  "Comedy",
 ];
+
+const YOUTUBE_API_KEY = "AIzaSyCnaujOXtf416HsuxgE06MaNoX0hB8OUrw";
+
+export const YOUTUBE_API = `https://www.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=${YOUTUBE_API_KEY}`;
