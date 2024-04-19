@@ -7,7 +7,7 @@ import { toggleMenu } from '../utils/appSlice'
 
 const LogoContainer = () => {
   const dispatch = useDispatch()
-  const handleClick =()=>{
+  const handleClick = () => {
     dispatch(toggleMenu())
   }
   return (
@@ -16,11 +16,13 @@ const LogoContainer = () => {
         <Link onClick={handleClick}>
           <HamburgerIcon />
         </Link>
-        <img
-          className="w-28 aspect-auto cursor-pointer"
-          src={YOUTUBE_LOGO}
-          alt="YouTube Logo"
-        />
+        <Link to="/">
+          <img
+            className="w-28 aspect-auto cursor-pointer"
+            src={YOUTUBE_LOGO}
+            alt="YouTube Logo"
+          />
+        </Link>
       </div>
     </div>
   )
