@@ -12,13 +12,12 @@ const VideoCard = ({ video }) => {
   const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
   return (
     <div className=" max-w-96 max-h-80 my-2 mt-3">
-      <Link>
+      <Link to={`/watch?v=${video?.id}`}>
         <img
           className="rounded-lg"
           width={331}
           src={video?.snippet?.thumbnails?.medium?.url}
-          alt=""
-          srcset=""
+          alt="Video"
         />
         <h2 className="text-nowrap font-semibold mt-2">
           {truncateString(video?.snippet?.title, 32)}

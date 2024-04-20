@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux'
 const SideBar = () => {
   const isMenuOpen = useSelector(store => store.app.isMenuOpen)
   
-  return isMenuOpen ? (
+  return isMenuOpen  ? (
     <div className="col-span-2  ">
       <div className="px-5 ">
         <MainList/>

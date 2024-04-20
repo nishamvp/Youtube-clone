@@ -13,9 +13,7 @@ const LogoContainer = () => {
   return (
     <div className="grid grid-cols-1">
       <div className=" flex gap-8 mx-2 items-center ">
-        <Link onClick={handleClick}>
-          <HamburgerIcon />
-        </Link>
+          <HamburgerIcon   onClick={handleClick} />
         <Link to="/">
           <img
             className="w-28 aspect-auto cursor-pointer"

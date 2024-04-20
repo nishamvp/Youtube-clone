@@ -9,7 +9,7 @@ const VideoContainer = () => {
   return !isLoading ? (
     <div className="mt-6 flex gap-5 flex-wrap  px-4 ">
       {videos?.map((video) => (
-        <VideoCard video={video} />
+        <VideoCard key={video.id} video={video} />
       ))}
     </div>
   ) : (
