@@ -3,19 +3,27 @@ import { YOUTUBE_SUGGESTION_API } from "../assets/constants";
 
 const useGetSuggestions = (searchQuery) => {
   const [suggestions, setSuggestions] = useState([]);
+
   useEffect(() => {
-    const fetchSearchQuery = async () => {
+    let timeout;
+
+    const fetchSuggestions = async () => {
       if (searchQuery) {
-        const suggestionData = await fetch(
-          YOUTUBE_SUGGESTION_API + searchQuery
-        );
-        const json = await suggestionData.json();
-        setSuggestions(json[1]);
+        timeout = setTimeout(async () => {
+          const response = await fetch(YOUTUBE_SUGGESTION_API + searchQuery);
+          const json = await response.json();
+          setSuggestions(json[1]);
+        }, 200);
       }
     };
 
-    fetchSearchQuery();
+    fetchSuggestions();
+
+    return () => {
+      clearTimeout(timeout);
+    };
   }, [searchQuery]);
+
   return { suggestions };
 };
 
