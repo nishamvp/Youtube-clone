@@ -11,7 +11,7 @@ const VideoCard = ({ video }) => {
   const timeDifference = currentDate - publishedDate
   const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
   return (
-    <div className="m-auto max-w-96 max-h-80 ">
+    <div className="m-auto py-3 max-w-96 max-h-80 ">
       <Link to={`/watch?v=${video?.id}`}>
         <img
           className="rounded-lg"
