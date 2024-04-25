@@ -7,7 +7,7 @@ const VideoContainer = () => {
   const videos = useSelector((store) => store.app.popularVideos)
   const { isLoading } = useGetVideos()
   return !isLoading ? (
-    <div className="mt-6 flex gap-5 flex-wrap  px-4 relative">
+    <div className="mt-6 grid grid-cols-3   px-4 ">
       {videos &&  <AdCard adVideo={videos[0]} /> }
       {videos?.map((video) => (
         <VideoCard key={video.id} video={video} />

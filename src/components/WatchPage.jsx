@@ -14,11 +14,10 @@ const WatchPage = () => {
   }, [])
 
   return (
-    <div className="w-screen">
+    <div className="w-screen rounded-lg">
       <iframe
         className={!isMenuOpen && `flex m-auto`}
-        width="1024"
-        height="576"
+        style={{width:"760px", height:"420px",borderRadius:"15px"}}
         src={`https://www.youtube.com/embed/${id}`}
         title="YouTube video player"
         frameborder="0"
