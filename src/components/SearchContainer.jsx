@@ -9,7 +9,7 @@ const SearchContainer = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-10 ">
+      <div className="grid grid-cols-10 "> 
         <div className="col-span-12 flex    ">
           <input
             className="border w-full rounded-l-full px-5 placeholder:text-xl"

@@ -8,7 +8,6 @@ const useGetSuggestions = (searchQuery) => {
   const cache = useSelector((store) => store.search);
   const dispatch = useDispatch();
 
-
   useEffect(() => {
     let timeout;
     const fetchSuggestions = async () => {
