@@ -1,9 +1,7 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 import CommentList from './CommentList'
 
 const CommentContainer = () => {
-  const isMenuOpen = useSelector((store) => store.app.isMenuOpen)
   const dummyData = [
     {
       name: 'Nisham Muhammed',
@@ -75,8 +73,8 @@ const CommentContainer = () => {
   ]
 
   return (
-    <div className="my-1 max-w-screen-md">
-      <h2 className="font-bold text-2xl ">Comments</h2>
+    <div className="max-w-screen-md my-1">
+      <h2 className="text-2xl font-bold ">Comments</h2>
       <CommentList comments={dummyData} />
     </div>
   )

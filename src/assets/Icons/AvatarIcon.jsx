@@ -4,12 +4,12 @@ function AvatarIcon({ isComment }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={isComment ? '50' : '40'}
-      height={isComment ? '50' : '40'}
+      width={isComment ? '50' : '30'}
+      height={isComment ? '50' : '30'}
       fill="none"
       viewBox="0 0 24 24"
     >
-      <path fill="#fff" d="M0 0H24V24H0z"></path>
+      <path d="M0 0H24V24H0z"></path>
       <path
         fill="#323232"
         fillRule="evenodd"
