@@ -7,6 +7,7 @@ import { addMessage } from '../utils/liveChatSlice'
 const LiveChatContainer = () => {
   const [liveChat, setLiveChat] = useState('')
   const dispatch = useDispatch()
+  const isMenuOpen = useSelector(store=>store.app.isMenuOpen)
   const chatMessages = useSelector((store) => store.livechat.chatMessages)
   useGetLiveChats()
 
@@ -17,8 +18,8 @@ const LiveChatContainer = () => {
   }
 
   return (
-    <div className="w-full">
-      <div className="flex flex-col-reverse h-[420px] w-full p-3 mr-3 rounded-lg overflow-y-scroll">
+    <div className={isMenuOpen?`w-3/12 right-0 absolute bg-gray-100`:`w-full`}>
+      <div className=" flex flex-col-reverse h-[420px] w-full p-3 mr-3 rounded-lg overflow-y-scroll">
         {chatMessages?.map((chatMessage, index) => (
           <LiveMessage key={index} message={chatMessage} />
         ))}

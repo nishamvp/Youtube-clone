@@ -25,7 +25,7 @@ const useGetLiveChats = () => {
     };
     const interval = setInterval(() => {
       fetchLiveMessage();
-    }, 1000);
+    }, 1500);
     return () => {
       clearInterval(interval);
     };

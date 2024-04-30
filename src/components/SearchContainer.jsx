@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import SearchIcon from '../assets/Icons/SearchIcon'
 import useGetSuggestions from '../hooks/useGetSuggestions'
+import { YOUTUBE_SEARCH_VIDEOS_API } from '../assets/constants'
 
 const SearchContainer = () => {
   const [searchQuery, setSearchQuery] = useState('')
   const [searchBlur, setSearchBlur] = useState(false)
   const { suggestions } = useGetSuggestions(searchQuery)
+
+  useEffect(()=>{
+    fetch(YOUTUBE_SEARCH_VIDEOS_API+suggestions)
+  },[suggestions])
 
   return (
     <div>
@@ -29,7 +34,7 @@ const SearchContainer = () => {
         <div className="absolute flex flex-col z-10 w-[rem]  bg-gray-50 px-2 py-2 rounded-lg shadow-sm border border-gray-50">
           <ul>
             {suggestions &&
-              suggestions.map((s, index) => <li key={index}>{s}</li>)}
+              suggestions.map((s, index) => <li className='hover:bg-white p-2' key={index}>{s}</li>)}
           </ul>
         </div>
       )}
