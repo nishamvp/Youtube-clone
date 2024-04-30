@@ -7,7 +7,10 @@ const liveChatSlice = createSlice({
   },
   reducers: {
     addMessage: (state, action) => {
-      state.chatMessages.push(action.payload);
+      state.chatMessages.unshift(action.payload);
+      if(state.chatMessages.length>25){
+        state.chatMessages.pop()
+      }
     },
   },
 });
