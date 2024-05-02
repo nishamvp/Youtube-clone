@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 
 const VideoCard = ({ video }) => {
   const truncateString = (string, length) => {
@@ -10,9 +10,16 @@ const VideoCard = ({ video }) => {
   const currentDate = new Date()
   const timeDifference = currentDate - publishedDate
   const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24))
+  const pathName = window.location.pathname
   return (
     <div className="m-auto py-3 max-w-96 max-h-80 ">
-      <Link to={`/watch?v=${video?.id}`}>
+      <Link
+        to={
+          pathName === '/results'
+            ? `/watch?v=${video?.id?.videoId}`
+            : `/watch?v=${video?.id}`
+        }
+      >
         <img
           className="rounded-lg"
           width={331}
