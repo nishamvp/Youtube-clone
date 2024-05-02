@@ -5,7 +5,7 @@ const VideoCard = ({ video }) => {
   const truncateString = (string, length) => {
     if (string.length < length) return string
     else return `${string.slice(0, length)}...`
-  } 
+  }
   const publishedDate = new Date(video?.snippet?.publishedAt)
   const currentDate = new Date()
   const timeDifference = currentDate - publishedDate
@@ -25,7 +25,9 @@ const VideoCard = ({ video }) => {
 
         <p>{video?.snippet?.channelTitle}</p>
         <div className="flex justify-between font-light ">
-          <p>{video?.statistics?.viewCount} Views</p>
+          {video?.statistics?.viewCount && (
+            <p>{video?.statistics?.viewCount} Views</p>
+          )}
           <p>{daysDifference} days ago</p>
         </div>
       </Link>
@@ -33,14 +35,15 @@ const VideoCard = ({ video }) => {
   )
 }
 
-
 export default VideoCard
 
 export const AdCard = ({ adVideo }) => {
   return (
     <div>
-      <div className='border border-neutral-500 p-2 mx  -2'><VideoCard video={adVideo} /></div>
-      <h4 className='font-semibold text-lg text-red-400 '>This is an Ad.</h4>
+      <div className="border border-neutral-500 p-2 mx  -2">
+        <VideoCard video={adVideo} />
+      </div>
+      <h4 className="font-semibold text-lg text-red-400 ">This is an Ad.</h4>
     </div>
-  );
-};
+  )
+}

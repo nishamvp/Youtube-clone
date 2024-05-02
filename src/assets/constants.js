@@ -52,7 +52,7 @@ export const BUTTON_LIST = [
   "Comedy",
 ];
 
-export const YOUTUBE_API_KEY = "AIzaSyCnaujOXtf416HsuxgE06MaNoX0hB8OUrw";
+export const YOUTUBE_API_KEY = "AIzaSyAJeveAwiHs4C2ilRQvndWalV7Axh05-dM";
 
 export const YOUTUBE_API = `https://www.googleapis.com/youtube/v3/videos?part=snippet,statistics&chart=mostPopular&maxResults=25&regionCode=IN&key=${YOUTUBE_API_KEY}`;
 
